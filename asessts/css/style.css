@@ -1,0 +1,772 @@
+body{
+    background-image: url(../images/blob-scene-haikei.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#main_container{
+    width: 98vw;
+    height: 100vh;
+
+}
+.navbar{
+    width: 100%;
+    height: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;;
+    display: grid;
+    grid-template-columns: 400px repeat(5,auto);
+    grid-template-rows: auto;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba( 251, 251, 251, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+.navbar a{
+    text-decoration: none;
+    color: #415A77;
+    font-size: 20px;
+}
+.navbar a:hover{
+  color: rgb(2, 29, 74);
+}
+.profile{
+    width: 100%;
+    height: 400px;
+    display:flex ;
+    margin-top: 70px;
+}
+.matter{
+    width: 60%;
+    height: 70%;
+    padding: 10px;
+    padding-left: 60px;
+    padding-top: 100px;
+    text-align: center;
+    margin-left: 50px;
+}
+.matter span{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    color: #415A77;
+    font-weight: bolder;
+}
+.matter .submatter{
+    width: 100%;
+    height: max-content;
+    align-content: center;
+    color: grey;
+}
+.profile_pic{
+    width: 40%;
+    height: 97%;
+}
+.profile_pic .pic{
+    width: 60%;
+    height: 80%;
+    border-radius: 50%;
+    background-image: url(../images/profilepic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0ch;
+    margin-top: 50px;
+}
+.about{
+    width: 90%;
+    height: 700px;
+    margin: auto;
+}
+.about span{
+    color: #415A77;
+    font-size: 30px;
+}
+.about .education{
+    width: 1%;
+    height: 70%;
+    background-color: #508C9B;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+}
+.about .education .circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #201E43;
+    position: relative;
+}
+.about .education .circle_1 .arrow_mark_1{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #000000;
+    position: absolute;
+    top: 15px;
+    left: -27px;
+}
+.about .education .circle .educational{
+    width: 200px;
+    height: 130px;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient( to bottom right,#161A30, #31304D);
+    transition: all 0.5s;
+
+
+}
+.about .education .circle .educational .strip{
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 10px;
+
+}
+.about .education .tenth_class{
+    position: absolute;
+    top: 15px;
+    left: -250px;
+    
+    
+    
+}
+.about .education .circle .heading{
+    font-size: 25px;
+    color: white;
+    font-weight: 40px;
+    margin-bottom: 10px;
+    
+}
+.about .education .circle .sub_heading{
+    font-size: 15px;
+    color: white;
+    text-align: left;
+}
+.about .education .tenth_class:hover, .about .education .btech_class:hover{
+    transform:rotate3d(1,2,1,-15deg);
+
+}
+.about .education .circle .arrow_mark_2{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 20px 10px 0;
+    border-color: transparent #000000 transparent transparent;
+
+    position: absolute;
+    top: 15px;
+    left: 50px;
+}
+.about .education .inter_class{
+    position: absolute;
+    top: 15px;
+    left: 70px;
+    transition: all 0.5s; 
+}
+.about .education .inter_class:hover{
+    transform:rotate3d(1,2,1,15deg);
+
+}
+.about .education .circle .arrow_mark_3{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #000000;
+    position: absolute;
+    top: 15px;
+    left: -27px;
+}
+.about .education .btech_class{
+    position: absolute;
+    top: 15px;
+    left: -250px;
+}
+.skills span{
+    color: #415A77;
+    font-size: 30px;
+    margin-left: 145px;
+    
+}
+.wrapper{
+    width: 100%;
+    max-width: 1536px;
+    height: 100px;
+    margin-inline: auto ;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+        
+    );
+}
+.wrapper .item{
+    width: 150px;
+    height: 80px;
+    border: 2px solid black;
+    background: linear-gradient( to bottom right,#201E43,#508C9B);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+    position: absolute;
+    top: 0px;
+    left: max(calc(200px *8), 100%);
+    animation-name: scroll_left;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+@keyframes scroll_left{
+    to{
+        left: -200px;
+    }
+}
+.wrapper .item_1{
+    animation-delay: calc( 30s /  8 * (8 - 1) * -1);
+}
+.wrapper .item_2{
+    animation-delay: calc( 30s /  8 * (8 - 2) * -1);
+}
+.wrapper .item_3{
+    animation-delay: calc( 30s /  8 * (8 - 3) * -1);
+}
+.wrapper .item_4{
+    animation-delay: calc( 30s /  8 * (8 - 4) * -1);
+}
+.wrapper .item_5{
+    animation-delay: calc( 30s /  8 * (8 - 5) * -1);
+}
+.wrapper .item_6{
+    animation-delay: calc( 30s /  8 * (8 - 6) * -1);
+}
+.wrapper .item_7{
+    animation-delay: calc( 30s /  8 * (8 - 7) * -1);
+}
+.wrapper .item_8{
+    animation-delay: calc( 30s /  8 * (8 - 8) * -1);
+}
+.projects{
+    width: calc(100% - 300px);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3,300px);
+    gap: 40px;
+    margin: auto;
+    margin-bottom: 100px;
+    
+  }
+  #projectsection{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  #projectsection span{
+    color: #415A77;
+    font-size: 30px;
+    margin-left: 145px;
+    
+}
+  .project{
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+  }
+  .projects .project .project_description{
+    width: 70%;
+    height: 60%;
+    text-align: center;
+    padding: 20px;
+    align-self: center;
+    font-size: 20px;
+  }
+
+  .projects .project .project_card{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  }
+  .projects .project .project_card:hover{
+    transform: rotateY(180deg);
+  }
+  .projects .project .project_card .pc_1{
+    width:100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 30px;
+    background-image: url(../images/project_1pic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0ch;
+    position: absolute;
+    backface-visibility: hidden;
+    background-position: center;
+    
+  }
+  .projects .project .project_card .pc_2{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #508C9B;
+    color: white;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    text-align: center;
+    align-content: center;
+    font-size: 20px;
+  }
+
+  .projects .project .project_card .pc_2 a {
+    text-decoration: none;
+    background-color: #161A30;
+    color: white;
+    padding: 5px;
+  }
+  .projects .project_2 .project_card .pc_1{
+    background-image: url(../images/project_2pic.png);
+  }
+  .projects .project_3 .project_card .pc_1{
+    background-image: url(../images/project_3pic.png);
+    background-position-x: 17%;
+  }
+  #contact_form #form_containers{
+    width: 100%;
+    height: 500px;
+    
+    display: flex;
+  }
+  #contact_form_heading{
+    color: #415A77;
+    font-size: 30px;
+    margin-left: 145px;
+    margin-bottom: 70px;
+  }
+  #contact_form #form_containers #my_details{
+        width: 45%;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+        
+  }
+  #contact_form #form_containers #my_details #border{
+    width: 60%;
+    height: 100%;
+    border: 2px solid #161A30;
+    border-radius: 20px;
+    margin-left: 200px;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 10px;
+  }
+  #contact_form #form_containers #my_details #contactpic{
+    width: 50%;
+    height: 40%;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-image: url(../images/Working-bro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    margin-left: 25%;
+    margin-top: 70px;
+    animation: updown 2s linear infinite backwards;
+  }
+  @keyframes updown{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        
+        transform: translateY(-20px);
+    }
+  }
+  #contact_form #form_containers #your_details{
+    width: 40%;
+    height: 84%;
+    
+    padding: 50px;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  #contact_form #form_containers #your_details input{
+    border: 2px solid #161A30;
+    border-radius: 4px;
+    
+  }
+  #formborder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    
+  }
+  #form_flex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+#form_flex input{
+    width: 45%;
+    height: 40px;
+  }
+  #fullname{
+    width: 100%;
+    height: 30px;
+  }
+  #message textarea{
+    width: 100%;
+    height: 30px;
+    border: 2px solid #161A30;
+  }
+  #formborder button{
+    width: 25%;
+    height: 30px;
+    align-self: flex-end;
+    background-color: #508C9B;
+  }
+  footer{
+    width: 100%;
+    height: 100px;
+    background-color: #161A30;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+  .fa {
+    padding: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: white;
+  }
+  @media screen and (min-width: 426px) and (max-width:768px){
+    .navbar{
+      height: 70px;
+      grid-template-columns: 300px repeat(2,auto);
+      grid-template-rows: auto auto;
+      column-gap:5px ;
+    }
+    .name {
+      grid-row: span 3; 
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .matter{
+      margin-left: 30px;
+      padding-left: 30px;
+    }
+    .profile_pic{
+      width: 60%;
+    }
+    .profile_pic .pic{
+      width: 70%;
+      height: 60%;
+      margin-top: 80px;
+    }
+    .skills span{
+      margin-left: 100px
+    }
+    .wrapper .item{
+      width: 120px;
+      height: 60px;
+    }
+    #projectsection span{
+      margin-left: 100px;
+    }
+    .projects{
+      width: calc(100% - 100px);
+      margin-bottom: 0px;
+    }
+    #projectsection{
+      margin-bottom: 0px;
+    }
+    .projects .project .project_card .pc_1{
+      background-size: 150%; /* This scales the image to ensure the entire image is visible */
+      background-position: center center;
+      background-position-x: -40px;
+    }
+    .projects .project_3 .project_card .pc_1{
+      background-position-x: -20px;
+    }
+    #contact_form_heading{
+      margin-left: 80px;
+      margin-top: 30px;
+    }
+    #contact_form #form_containers{
+      height: 1000px;
+      flex-direction: column;
+      
+    }
+    #contact_form #form_containers #my_details #border{
+      width: 100%;
+      height: 80%;
+    }
+    #contact_form #form_containers #my_details #contactpic{
+      margin-top: 50px;
+    }
+    #contact_form #form_containers #your_details{
+      width: 45%;
+      height: 40%;
+      position: relative;
+      top: 0px;
+      left: 200px;
+      padding: 20px;
+    }
+    #form_flex{
+      display: flex;
+      flex-direction: column;
+     gap: 20px;
+    }
+    #message textarea{
+      width: 50%;
+      height: 30px;
+      
+    }
+    #formborder button{
+      width: 25%;
+      height: 50px;
+      align-self: flex-end;
+      background-color: #508C9B;
+      margin-top: 10px;
+    }
+    footer{
+      width: 100%;
+      height: 100px;
+      background-color: #161A30;
+      margin-top: 100px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+    }
+    .fa {
+      padding: 20px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      color: white;
+    }
+  }
+  @media screen and (min-width:375px) and (max-width:426px){
+    .navbar{
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      height: 90px;
+    }
+    .name{
+      grid-column: span 2;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 30px;
+    }
+    .profile{
+      flex-direction: column;
+      margin-top: 20px;
+      height: 800px;
+      width: 110%;
+    }
+    .matter{
+      padding-left: 25px;
+    }
+    .matter .submatter{
+      width: 110%;
+    }
+    .profile_pic{
+      width: 100%;
+      height: 80%;
+    }
+    .profile_pic .pic{
+      margin-top: 0px;
+      margin-left: 80px;
+    }
+    .about span{
+      margin-bottom: 20px;
+    }
+    .about .education{
+      margin-inline: 60px;
+      height: 60%;
+      margin-top: 30px;
+    }
+    .about .education .circle{
+      width: 20px;
+      height: 20px;
+    }
+    .about .education .circle_1 .arrow_mark_1{
+      border-width: 10px 20px 10px 0;
+      border-color: transparent #000000 transparent transparent;
+      top: 0px;
+      left: 30px;
+    }
+    .about .education .circle .arrow_mark_2{
+      top: 0px;
+      left: 30px;
+    }
+    .about .education .circle .arrow_mark_3{
+      border-width: 10px 20px 10px 0;
+      border-color: transparent #000000 transparent transparent;
+      top: 0px;
+      left: 30px;
+    }
+    .about .education .inter_class{
+      top: 0px;
+      left: 50px;
+    }
+    .about .education .tenth_class{
+      top: 0px;
+      left: 50px;
+    }
+    .about .education .btech_class{
+      top: 0px;
+      left: 50px;
+    }
+    .about .education .circle .educational{
+      width: 150px;
+      height: 130px;
+    }
+    .skills span{
+      margin-left: 30px;
+    }
+    .wrapper{
+      width: 100%;
+      max-width: 1536px;
+      height: 70px;
+    }
+    .wrapper .item{
+      width: 100px;
+      height: 50px;
+      font-size: 16px;
+      animation-duration: 20s;
+    }
+    .wrapper .item_1{
+      animation-delay: calc( 20s /  8 * (8 - 1) * -1);
+  }
+  .wrapper .item_2{
+      animation-delay: calc( 20s /  8 * (8 - 2) * -1);
+  }
+  .wrapper .item_3{
+      animation-delay: calc( 20s /  8 * (8 - 3) * -1);
+  }
+  .wrapper .item_4{
+      animation-delay: calc( 20s /  8 * (8 - 4) * -1);
+  }
+  .wrapper .item_5{
+      animation-delay: calc( 20s /  8 * (8 - 5) * -1);
+  }
+  .wrapper .item_6{
+      animation-delay: calc( 20s /  8 * (8 - 6) * -1);
+  }
+  .wrapper .item_7{
+      animation-delay: calc( 20s /  8 * (8 - 7) * -1);
+  }
+  .wrapper .item_8{
+      animation-delay: calc( 20s /  8 * (8 - 8) * -1);
+  }
+  .projects{
+    width: 95%;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3,600px);
+  }
+  #projectsection span{
+    margin-left: 30px;
+  }
+  .project{
+    flex-direction: column;
+
+  }
+  .projects .project .project_card{
+    width: 95%;
+  }
+  .project_2{
+    flex-direction: column-reverse;
+  }
+  #contact_form_heading{
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  #contact_form #form_containers{
+    height: 1000px;
+    flex-direction: column;
+    
+  }
+  #contact_form #form_containers #my_details{
+    width: 100%;
+  }
+ #contact_form #form_containers #my_details #border{
+  margin-left: 50px;
+  height: 100%;
+
+ }
+ #contact_form #form_containers #my_details #contactpic{
+  width: 70%;
+    height: 40%;
+    margin-left: 40px;
+ }
+ #contact_form #form_containers #your_details{
+  width: 40%;
+  height: 40%;
+  position: relative;
+  top: 50px;
+  left: 58px;
+  
+ }
+ #message textarea{
+  margin-bottom: 30px;
+ }
+ #formborder button{
+  width: 50%;
+  height: 50px;
+  margin-top: 10px;
+ }
+ footer{
+  width: 100%;
+  height: 100px;
+  background-color: #161A30;
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+ }
+ .fa {
+  padding: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: white;
+}
+  }

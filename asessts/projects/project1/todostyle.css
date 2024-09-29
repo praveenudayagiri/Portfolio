@@ -1,0 +1,16 @@
+
+.main{
+    width: 500px;
+    height: max-content;
+    border: 3px solid black;
+    margin: 200px auto;
+    padding: 50px;
+}
+.input-button{
+    width: 200px;
+    height: 30px;
+    color: white;
+    background-color: #415A77;
+    margin-top: 20px;
+    margin-left: 150px;
+}

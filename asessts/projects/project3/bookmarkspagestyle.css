@@ -1,0 +1,51 @@
+body{
+    background-color: #415A77;
+   
+}
+.maincontainer{
+    width: max-content;
+    height: max-content;
+ 
+    margin: auto;
+    align-content: center;
+}
+.bookmarks-box{
+    background-color: white;
+    border: 3px solid black;
+   padding: 30px;
+   font-size: xx-large;
+    border-radius: 10%;
+    margin-top: 100px;
+}
+input{
+    width: 90%;
+    height: 30px;
+    border-radius: 5%;
+}
+.bookmarks-box button{
+    width: 60%;
+    height: 30px;
+    border-radius: 5%;
+    margin-top: 15px;
+    margin-left: 60px;
+    background-color: blue;
+
+}
+.bookmarks{
+    height: max-content;
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 10%;
+    margin-top: 50px;
+    padding: 30px;
+   font-size: xx-large;
+}
+
+a{
+    text-decoration: none;
+    width: 30%;
+    height: 20px;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5%;
+}
