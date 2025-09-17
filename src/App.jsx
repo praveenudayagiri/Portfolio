@@ -23,9 +23,11 @@ import "react-vertical-timeline-component/style.min.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
+
 // --------------------------- Data ---------------------------
 const EMAIL = "praveenudayagiri724@gmail.com";
 const RESUME_URL = "./Praveen_Udayagiri_Resume.pdf";
+
 
 const EDUCATION = [
   {
@@ -57,6 +59,7 @@ const EDUCATION = [
   },
 ];
 
+
 const SKILL_LOGOS = {
   C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
   "C++": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
@@ -79,7 +82,11 @@ const SKILL_LOGOS = {
   Keras: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg",
   OpenCV: "https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo.svg",
   "Socket.io":"https://tse4.mm.bing.net/th/id/OIP.2gTirRDwK2kTZxpX-ru1fAAAAA?w=256&h=256&rs=1&pid=ImgDetMain&o=7&rm=3",
+  LinkedIn: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+  LeetCode: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png",
+  GFG: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
 };
+
 
 const SKILLS = [
   {
@@ -95,14 +102,32 @@ const SKILLS = [
   {
     icon: <Server className="h-5 w-5" aria-hidden />,
     title: "Backend",
-    items: ["Node.js", "Express.js", "MongoDB","Socket.io"],
+    items: ["Node.js", "Express.js", "MongoDB", "Socket.io"],
   },
   {
     icon: <Wrench className="h-5 w-5" aria-hidden />,
     title: "Tools",
     items: ["Git", "GitHub", "AWS", "Postman"],
   },
+  {
+    icon: <Code2 className="h-5 w-5" aria-hidden />,
+    title: "Data Structures & Algorithms",
+    items: ["LeetCode", "GFG"],
+  },
 ];
+
+
+const profileLinks = {
+  LinkedIn: "https://www.linkedin.com/in/your-linkedin-username",
+  GitHub: "https://github.com/your-github-username",
+  LeetCode: "https://leetcode.com/u/221fa04219C0rQhI/",
+  GFG: "https://www.geeksforgeeks.org/user/praveenudaqvjg/"
+};
+
+const getProfileUrl = (skill) => {
+  return profileLinks[skill] || "#";
+};
+
 
 const PROJECTS = [
   {
@@ -151,6 +176,7 @@ const PROJECTS = [
 ];
 
 
+
 const Chip = ({ children }) => (
   <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">
     {children}
@@ -160,6 +186,7 @@ const Chip = ({ children }) => (
 const Page = ({ children }) => (
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">{children}</div>
 );
+
 
 const SectionTitle = ({ icon, title, kicker }) => (
   <div className="mb-8 flex items-end justify-between gap-4">
@@ -173,6 +200,7 @@ const SectionTitle = ({ icon, title, kicker }) => (
   </div>
 );
 
+
 const Card = ({ children, className = "" }) => (
   <div className={
     "rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg shadow-black/30 backdrop-blur " +
@@ -182,6 +210,7 @@ const Card = ({ children, className = "" }) => (
   </div>
 );
 
+
 const GradientBg = () => (
   <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
     <div className="absolute -top-40 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full bg-blue-600/20 blur-[120px]" />
@@ -189,17 +218,20 @@ const GradientBg = () => (
   </div>
 );
 
+
 const TIMELINE_ICONS = {
   "10th": <School className="h-5 w-5" />,
   "12th": <School className="h-5 w-5" />,
   "B.Tech": <School className="h-5 w-5" />,
 };
 
+
 const Nav = ({ onCopyEmail }) => {
   const [open, setOpen] = useState(false);
   const linkBase =
     "rounded-xl px-3 py-2 text-sm font-medium transition hover:bg-white/10 hover:text-white";
   const active = "bg-white/10 text-white";
+
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur">
@@ -210,6 +242,7 @@ const Nav = ({ onCopyEmail }) => {
           </div>
           <span className="text-sm font-semibold tracking-wide text-white">Praveen Udayagiri</span>
         </NavLink>
+
 
         <nav className="hidden items-center gap-1 md:flex">
           <NavLink
@@ -246,6 +279,7 @@ const Nav = ({ onCopyEmail }) => {
           </button>
         </div>
 
+
         {/* Mobile menu button */}
         <button
           className="inline-flex items-center justify-center rounded-xl border border-white/10 p-2 text-white md:hidden"
@@ -255,6 +289,7 @@ const Nav = ({ onCopyEmail }) => {
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
+
 
       {open && (
         <div className="border-t border-white/10 bg-black/80 px-4 py-3 backdrop-blur md:hidden">
@@ -287,11 +322,43 @@ const Nav = ({ onCopyEmail }) => {
   );
 };
 
-const Footer = () => (
-  <footer className="border-t border-white/10 py-10 text-center text-sm text-slate-400">
-    Built with ❤️ by Praveen Udayagiri · © {new Date().getFullYear()}
-  </footer>
-);
+
+import { Linkedin, Github } from "lucide-react"; // Add these imports at the top of your file
+
+const Footer = () => {
+  const profileLinks = {
+    LinkedIn: "https://www.linkedin.com/in/praveen-udayagiri/",
+    GitHub: "https://github.com/praveenudayagiri",
+  };
+
+  return (
+    <footer className="border-t border-white/10 py-10 text-center text-sm text-slate-400 flex flex-col items-center gap-3 md:flex-row md:justify-center md:gap-6">
+      <div>Built with ❤️ by Praveen Udayagiri · © {new Date().getFullYear()}</div>
+      <div className="flex gap-6">
+        <a
+          href={profileLinks.LinkedIn}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="text-slate-400 hover:text-white transition"
+        >
+          <Linkedin className="h-5 w-5" />
+        </a>
+        <a
+          href={profileLinks.GitHub}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="text-slate-400 hover:text-white transition"
+        >
+          <Github className="h-5 w-5" />
+        </a>
+      </div>
+    </footer>
+  );
+};
+
+
 
 const Home = () => {
   const words = [
@@ -305,6 +372,7 @@ const Home = () => {
     const id = setInterval(() => setIndex((i) => (i + 1) % words.length), 2400);
     return () => clearInterval(id);
   }, []);
+
 
   return (
     <Page>
@@ -364,6 +432,7 @@ const Home = () => {
   );
 };
 
+
 const Education = () => (
   <Page>
     <SectionTitle icon={<School className="h-5 w-5" />} title="Education Timeline" kicker="Where I studied" />
@@ -391,6 +460,7 @@ const Education = () => (
   </Page>
 );
 
+
 const Skills = () => (
   <Page>
     <SectionTitle icon={<Braces className="h-5 w-5" />} title="Skills" kicker="Tech I use" />
@@ -410,14 +480,21 @@ const Skills = () => (
                 className="flex flex-col items-center cursor-pointer rounded-lg bg-white/5 p-3 backdrop-blur transition-transform"
                 title={skill}
               >
-                <LazyLoadImage
-                  alt={skill}
-                  src={SKILL_LOGOS[skill]}
-                  effect="blur"
-                  className="h-8 w-8 object-contain select-none"
-                  draggable={false}
-                />
-                <span className="mt-2 text-sm text-white select-none">{skill}</span>
+                <a
+                  href={getProfileUrl(skill)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center"
+                >
+                  <LazyLoadImage
+                    alt={skill}
+                    src={SKILL_LOGOS[skill]}
+                    effect="blur"
+                    className="h-8 w-8 object-contain select-none"
+                    draggable={false}
+                  />
+                  <span className="mt-2 text-sm text-white select-none">{skill}</span>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -426,6 +503,7 @@ const Skills = () => (
     </div>
   </Page>
 );
+
 
 
 
@@ -450,6 +528,7 @@ const ProjectCard = ({ p }) => {
             </a>
           )}
 
+
         </div>
       </div>
       <div className="mt-3 flex flex-wrap gap-2">
@@ -466,6 +545,7 @@ const ProjectCard = ({ p }) => {
   );
 };
 
+
 const Projects = () => (
   <Page>
     <SectionTitle icon={<GitBranch className="h-5 w-5" />} title="Projects" kicker="What I've built" />
@@ -477,15 +557,18 @@ const Projects = () => (
   </Page>
 );
 
+
 const Resume = () => {
   const [src, setSrc] = React.useState(RESUME_URL);
   const inputRef = React.useRef(null);
+
 
   const onPick = (e) => {
     const f = e.target?.files?.[0];
     if (!f) return;
     setSrc(URL.createObjectURL(f));
   };
+
 
   return (
     <Page>
@@ -504,6 +587,7 @@ const Resume = () => {
   )}
 </div>
 
+
           <div className="w-full max-w-sm">
             <a
               href={src}
@@ -518,6 +602,7 @@ const Resume = () => {
     </Page>
   );
 };
+
 
 
 
@@ -546,6 +631,7 @@ const AnimatedRoutes = () => {
   );
 };
 
+
 const Toast = ({ show, text }) => (
   <div
     className={`pointer-events-none fixed inset-x-0 top-4 z-[60] mx-auto w-fit transition ${
@@ -560,8 +646,10 @@ const Toast = ({ show, text }) => (
   </div>
 );
 
+
 const App = () => {
   const [toast, setToast] = useState("");
+
 
   const onCopyEmail = async () => {
     try {
@@ -573,6 +661,7 @@ const App = () => {
       setTimeout(() => setToast(""), 2000);
     }
   };
+
 
   return (
     <div className="min-h-screen bg-black text-slate-100">
@@ -586,5 +675,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
