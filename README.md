@@ -1,8 +1,5 @@
 # 🚀 Praveen Udayagiri's Portfolio
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-badge-id/deploy-status)](https://praveenudayagiriportfolio.netlify.app/)
-![GitHub last commit](https://img.shields.io/github/last-commit/praveenudayagiri/praveenudayigiriportfolio)
-![GitHub stars](https://img.shields.io/github/stars/praveenudayagiri/praveenudayigiriportfolio?style=social)
 
 ---
 
@@ -19,13 +16,6 @@ I'm a passionate Full-Stack Developer specializing in the MERN stack, DSA proble
 ## 🌐 Live Portfolio
 
 👉 [View Portfolio](https://praveenudayagiriportfolio.netlify.app/#/)
-
----
-
-## 📸 Screenshots
-
-<!-- You can replace this image with your own portfolio screenshot -->
-![Portfolio Screenshot](https://user-images.githubusercontent.com/your-github-username/your-image-id.png)
 
 ---
 
